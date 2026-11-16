@@ -1,0 +1,37 @@
+{
+  "name": "deskwoot",
+  "displayName": "Deskwoot",
+  "version": "1.0.0",
+  "minClientVersions": {
+    "cursor": "3.13.0"
+  },
+  "description": "Work support conversations as an AI teammate, write notes and drafts, and set up your help desk.",
+  "author": {
+    "name": "Deskwoot (Neltacore LLC)",
+    "email": "hello@deskwoot.com"
+  },
+  "homepage": "https://deskwoot.com/mcp",
+  "repository": "https://github.com/Deskwoot/cursor-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "deskwoot",
+    "mcp",
+    "support",
+    "customer support",
+    "help desk",
+    "live chat",
+    "conversations",
+    "ai teammates"
+  ],
+  "category": "integrations",
+  "tags": [
+    "deskwoot",
+    "support",
+    "mcp",
+    "help desk"
+  ],
+  "mcpServers": "./mcp.json",
+  "rules": "./rules/",
+  "skills": "./skills/"
+}

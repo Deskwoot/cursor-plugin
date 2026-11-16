@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "deskwoot": {
+      "type": "http",
+      "url": "https://deskwoot.com/api/mcp"
+    }
+  }
+}
