@@ -74,7 +74,8 @@ Details: [Privacy Policy](https://deskwoot.com/privacy) (section 9e, Connected A
   "mcpServers": {
     "deskwoot": {
       "type": "http",
-      "url": "https://deskwoot.com/api/mcp"
+      "url": "https://deskwoot.com/api/mcp",
+      "placement": "server"
     }
   }
 }
