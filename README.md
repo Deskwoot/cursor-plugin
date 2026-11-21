@@ -12,11 +12,13 @@ Deskwoot checks every call on its own server. Risky replies wait as drafts for a
 
 ## Install
 
-1. Open **Cursor Settings → Plugins**.
-2. Search for **Deskwoot**.
-3. Click **Install**, then complete the Deskwoot sign in.
+Once Deskwoot is listed in the [Cursor Marketplace](https://cursor.com/marketplace):
 
-Or run `/add-plugin deskwoot` in chat.
+1. Open **Customize** in Cursor's sidebar.
+2. Search for **Deskwoot**.
+3. Select **Install**, choose a project or user scope, then complete the Deskwoot sign in.
+
+Without the plugin, add the entry under [MCP](#mcp) to `~/.cursor/mcp.json` (all your projects) or `.cursor/mcp.json` (one project), save the file and restart Cursor. You then get Deskwoot's MCP server without this plugin's rule and skill.
 
 ## Connect
 
@@ -52,7 +54,7 @@ The consent page also shows whether Deskwoot verified the app that asks. An agen
 - **Hide that it is an AI.** Its replies go out as plain text, marked as written by AI on every channel unless the workspace owner switches that label off for the agent. A reply in which it claims to be a person waits as a draft for your team either way.
 - **See what you keep from AI.** Conversations and contacts marked **Do not share with AI agents** are never shown to any agent.
 
-Deskwoot logs what each agent does in Deskwoot and which conversations it reads. Administrators see each agent's activity under **AI teammates** and can pause or stop it there at any time (a setup agent is stopped under **Settings, Security**); stopping ends every sign in and token of that agent at once.
+Deskwoot logs what each agent does in Deskwoot and which conversations it reads. Administrators see each agent's activity under **AI teammates** and can pause or stop any agent there at any time, a setup agent too. Whoever connected an agent also finds it under **Settings, Security** and can stop it there. Stopping ends every sign in and token of that agent at once.
 
 ## Plans
 
@@ -69,17 +71,19 @@ Details: [Privacy Policy](https://deskwoot.com/privacy) (section 9e, Connected A
 
 ## MCP
 
+For your own `mcp.json`:
+
 ```json
 {
   "mcpServers": {
     "deskwoot": {
-      "type": "http",
-      "url": "https://deskwoot.com/api/mcp",
-      "placement": "server"
+      "url": "https://deskwoot.com/api/mcp"
     }
   }
 }
 ```
+
+Cursor's MCP docs show no `type` or `placement` for a remote server, and Deskwoot needs only the `url`. The plugin's own [`mcp.json`](mcp.json) also sets `"type": "http"` and `"placement": "server"`, as the hosted servers in Cursor's official plugin repository do. Grok Bot uses Cursor's plugins and offers a sign in only for a hosted server marked `"placement": "server"`.
 
 The server's tools cover conversations (read, reply, private notes, status, priority, labels, assignment, hand over to a person), drafts, contacts, files, tickets and trackers (read, internal comments, a new ticket from a conversation and a Jira or Linear issue a teammate asks for, on Enterprise for an agent with every inbox), the help center and Training Hub, team support numbers, order lookups with proposals, the workspace setup and Deskwoot's settings. Which ones an agent gets depends on what you chose when connecting it; the server is the source of truth for tool names and schemas. It sends its rules when the agent connects and again in `whoami`.
 
