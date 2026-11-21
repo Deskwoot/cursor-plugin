@@ -83,7 +83,7 @@ For your own `mcp.json`:
 }
 ```
 
-Cursor's MCP docs show no `type` or `placement` for a remote server, and Deskwoot needs only the `url`. The plugin's own [`mcp.json`](mcp.json) also sets `"type": "http"` and `"placement": "server"`, as the hosted servers in Cursor's official plugin repository do. Grok Bot uses Cursor's plugins and offers a sign in only for a hosted server marked `"placement": "server"`.
+Cursor's MCP docs show no `type` or `placement` for a remote server, and Deskwoot needs only the `url`. The plugin's own [`mcp.json`](mcp.json) also sets `"type": "http"`, as almost every hosted server in Cursor's official plugin repository does. It sets `"placement": "server"` too, because Grok Bot uses Cursor's plugins and offers a sign in only for a hosted server marked that way.
 
 The server's tools cover conversations (read, reply, private notes, status, priority, labels, assignment, hand over to a person), drafts, contacts, files, tickets and trackers (read, internal comments, a new ticket from a conversation and a Jira or Linear issue a teammate asks for, on Enterprise for an agent with every inbox), the help center and Training Hub, team support numbers, order lookups with proposals, the workspace setup and Deskwoot's settings. Which ones an agent gets depends on what you chose when connecting it; the server is the source of truth for tool names and schemas. It sends its rules when the agent connects and again in `whoami`.
 
