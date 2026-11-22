@@ -2,6 +2,10 @@
 
 All notable changes to this plugin will be documented here.
 
+## 1.0.1
+
+- The `deskwoot-setup` skill gives the public page that describes the plans (`links.pricing` from `setup_status`) for a question about plans; an administrator changes the plan in Deskwoot. `setup_status` no longer has a billing link.
+
 ## 1.0.0 (initial release)
 
 - Added the `deskwoot` MCP server pointing at `https://deskwoot.com/api/mcp`, with OAuth sign in through Dynamic Client Registration, Client ID Metadata Documents and PKCE. It declares `placement: server`, so Grok Bot shows its connect and sign in card.
