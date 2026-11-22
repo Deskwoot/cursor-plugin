@@ -25,7 +25,8 @@ Find a setting with `settings_find`, read it with `settings_read` and change it 
 
 ## What stays with your owner
 
-- Billing, security, API tokens, team invitations and other AI agents: give them the matching link from `setup_status`.
+- Security, API tokens, team invitations and other AI agents: give them the matching link from `setup_status`.
+- The plan: an administrator changes it in Deskwoot. For a question about plans, give them `links.pricing`, the public page that describes them.
 - A channel that connects with its own sign in (Facebook, Instagram, WhatsApp through Meta, Microsoft Teams, Discord, TikTok): your owner connects it at the link `setup_status` gives.
 - Ask for an integration's API key only when your owner offers it, and never for a password or a sign in code.
 - When a tool answers with a code, tell your owner what it says and what it needs before you call again.
